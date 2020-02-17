@@ -22,7 +22,8 @@ def weather_pull(location):
 
             # jika panjang karakter > 0 gunakan file weather.tmp  di folder /tmp {uptodate}
         if lenght_text > 0:
-            # jika ada interntet folder path di ganti ke /tmp {uptodate} dan update file weather.tmp  di folder conky/weather
+            # jika ada interntet folder path di ganti ke /tmp {uptodate} dan update file weather.tmp  
+            # di folder conky/weather
             # file lama
             write_to_spesific(loc_update_tmp)
             # untuk mempetahankan jika koneksi internet tidak ada di file weather.tmp conky/weather
@@ -43,7 +44,8 @@ def write_to_spesific(location):
     with open("{home}/.config/conky/weather/conky_weather.conf".format(home=home), "r") as f:
         read_text = f.readlines()
 
-    #  dapatkan index yg akan di replace dengan kententuan jika ada internet menggunakna /tmp dan tidak menggunakan conky/weather
+    #  dapatkan index yg akan di replace dengan kententuan jika ada internet menggunakna /tmp dan 
+    #  tidak menggunakan conky/weather
     write_text = read_text
     write_text[41] = "{location}".format(location=location)
 

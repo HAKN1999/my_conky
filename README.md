@@ -1,15 +1,17 @@
 # conky
 
---BUG
-#     Masih terdapat Bug di autostart untuk tampilan weather
+# --BUG
+     Masih terdapat Bug di autostart untuk tampilan weather
 
---Requirement
+# --Requirement
     vnstat 
-#	sudo apt install vnstat
+    sudo apt install vnstat
 
---Configurasi
-#   cd conky/ 
-#   ./install_conky.py
-#   copy font 
+# --Configurasi
+    cd conky/ 
+    ./install_conky.py
+    copy font 
     sudo cp fonts/* /usr/share/fonts
-#	configurasi file vnstat di /etc/vnstat.conf dengan devaice yang di gunakan enp4s0/wlp3s0?:
+
+# --configurasi file vnstat 
+    /etc/vnstat.conf dengan perangkat jaringan yang di gunakan enp4s0/wlp3s0?:

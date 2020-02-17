@@ -1,7 +1,5 @@
 # conky
-# --Spesial thanks for
-     @Kosteron
-     
+ 
 # --BUG
      Masih terdapat Bug di autostart untuk tampilan weather
 
@@ -30,3 +28,7 @@
     --rubah nilai gap_x,gap_y
     gap_x = 450,
     gap_y = 522,
+# --Credits
+     Many thanks to :
+          @Kosteron
+           - https://github.com/Kosteron/Conky

@@ -25,6 +25,8 @@ if not os.path.isdir("{home}/.config/conky".format(home=home)):
 
 # hapus file jika ada di dalam folder .config/conky untuk
 # menghindari crash saat installasi
+# ? harus nya proses ini untuk melihat ada file di dalam conky atau tidak,
+# jika tidak masuk ke opsi else,tapi tetap menjalankan opsi if user_pilih
 cek = subprocess.check_output(
     ["ls -a",  "{home}/.config/conky".format(home=home)], shell=True)
 if len(cek) > 0:

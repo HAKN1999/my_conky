@@ -28,6 +28,7 @@
     --rubah nilai gap_x,gap_y
     gap_x = 450,
     gap_y = 522,
+    
 # --Credits
      Many thanks to :
           @Kosteron

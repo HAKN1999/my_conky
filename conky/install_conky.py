@@ -43,12 +43,14 @@ else:
 print "\nFile akan di copy ke ~/.config/conky"
 os.system("cp -r * {home}/.config/conky".format(home=home))
 time.sleep(1)
+
 # membuat file autostart untuk otomatis aktif saat booting
 print "\nMembuat file autostart , untuk booting selanjutnya"
 os.system(
     "cp %s/.config/conky/start_conky.desktop %s/.config/autostart/start_conky.desktop" % (home, home))
 os.system(
     "cp %s/.config/conky/weather/weather.desktop %s/.config/autostart/weather.desktop" % (home, home))
+
 # ! bug copy mode root
 # installasi font
 # print "Installasi fonts"

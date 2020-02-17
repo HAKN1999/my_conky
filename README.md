@@ -1,5 +1,7 @@
 # conky
-
+# --Spesial thanks for
+     @Kosteron
+     
 # --BUG
      Masih terdapat Bug di autostart untuk tampilan weather
 

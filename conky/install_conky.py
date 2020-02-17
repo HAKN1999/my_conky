@@ -39,6 +39,7 @@ if len(cek) > 0:
         exit()
 else:
     pass
+
 # copy file download ke .config/conky
 print "\nFile akan di copy ke ~/.config/conky"
 os.system("cp -r * {home}/.config/conky".format(home=home))

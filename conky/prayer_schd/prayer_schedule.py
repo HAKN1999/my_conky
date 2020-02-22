@@ -78,17 +78,19 @@ def get_source(url):
                 grsU="┴",
                 lok=",".join(str(daerah).ljust(11, " ")
                              for daerah in daerah_sholats)
-
             )
+
+            table = tables
+
+            # tulis ke file
+            with open("/tmp/prayer.tmp", "w") as f:
+                f.write(table)
+
         except:
             pass
 
-        table = tables
-        # print table
-
-        # tulis ke file
-        with open("/tmp/prayer.tmp", "w") as f:
-            f.write(table)
+        if not os.path.isfile("/tmp/prayer.tmp"):
+            write_to_spesicif(loc_default_conky)
 
         # get_lengh
         with open("/tmp/prayer.tmp", 'r') as f:

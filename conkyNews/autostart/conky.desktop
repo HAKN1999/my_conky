@@ -1,0 +1,15 @@
+[Desktop Entry]
+Comment[es_ES]=
+Comment=
+Exec=conky
+GenericName[es_ES]=
+GenericName=
+Icon=system-run
+MimeType=
+Name[es_ES]=
+Name=
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application

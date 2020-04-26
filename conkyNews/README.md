@@ -1,6 +1,6 @@
 # requirements
---plank
-sudo apt instll plank
+--plank\
+         sudo apt instll plank
 
 # copy font 
 sudo cp fonts/* /usr/share/fonts
@@ -15,7 +15,7 @@ cp .conkyrc ~/
 sudo cp -r macOS Black Transparency /usr/share/plank/themes/
 
 # activate plank theme
---open terminal
---command
-   plank --preferences
- Dibagian opsi theme pilih dengan theme macos black
+open terminal\
+               --command\
+               *plank --preferences*\ 
+                                       Dibagian opsi theme pilih dengan theme macos black

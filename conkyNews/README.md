@@ -1,9 +1,9 @@
 # Requirements
 ## Plank
-> sudo apt instll plank
+> sudo apt install plank
 
 # Copy font 
-> sudo cp fonts/* /usr/share/fonts
+> sudo cp Font/* /usr/share/fonts
 
 # Copy file autostart
 > cp autostart/* ~/.config/autostart

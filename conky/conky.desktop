@@ -1,0 +1,18 @@
+[Desktop Entry]
+Comment[es_ES]=
+Comment=
+Exec=sh /home/hafizd/.conky/conky_run.sh
+GenericName[es_ES]=
+GenericName=
+Icon=system-run
+MimeType=
+Name[es_ES]=
+Name=
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+X-GNOME-Autostart-enabled=true
+X-MATE-Autostart-enabled=true
+

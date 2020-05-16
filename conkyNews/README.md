@@ -20,7 +20,7 @@
 > *edit Exec = /home/username/*
 
 # Copy all file conky
-> cp conky/conky* ~/.conky
+> cp conky/* ~/.conky
 
 # Copy theme plank
 > sudo cp -r macOS Black Transparency /usr/share/plank/themes/

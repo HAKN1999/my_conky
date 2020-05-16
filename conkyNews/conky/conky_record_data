@@ -1,0 +1,65 @@
+conky.config = {
+		
+
+    background = false,
+    font = 'NanumGothic:pixelsize=9',
+    use_xft = true,
+    xftalpha = 1.0,
+    update_interval = 4,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type = 'dock',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 255,
+    own_window_colour = '#000',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+ draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    stippled_borders = 0,
+    border_width = 0,
+    default_color = '#BEC8CB',
+    default_shade_color = '#BEC8CB',
+    default_outline_color = '#BEC8CB',
+    alignment = 'top_left',
+    gap_x = 550,
+    gap_y = 690,
+    use_spacer = 'none',
+    uppercase = true,
+    text_buffer_size = 512,
+    no_buffers = true,
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+    use_spacer = 'none',
+    maximum_width = 1024,
+    minimum_height = 640,
+    uppercase = true,
+
+
+};
+
+conky.text = [[
+${voffset 10}
+${hr 1}
+#-------------------------
+#bagian simpan penggunaan| 
+#        data pada iface |
+#-------------------------
+${color fbf2d7}Usage since: ${alignr}${execi 30 sh  ~/.conky/interface.sh  |grep "since"  | awk  '{printf$3}'}
+${color fbf2d7}Iface:${alignr} ${execi 30 ip r show|grep ' src '|cut -d ' ' -f 3,3 }
+${voffset 2}
+${color fbf2d7}${goto 70}Rx ${color9}${goto 140}Tx ${alignr}${color fbf2d7}Total
+${goto 30}${color fbf2d7}Today: ${goto 70}${execi 30 sh  ~/.conky/interface.sh  | grep "today" | awk '{printf$2 $3}'}${goto 140}${color9}${execi 30 sh  ~/.conky/interface.sh  | grep "today" | awk '{printf $5 $6}'}${alignr}${color fbf2d7}${execi 30 sh  ~/.conky/interface.sh | grep "today" | awk '{printf $8 $9}'}
+${goto 30}${color fbf2d7}Week:${goto 70}${color fbf2d7}${execi 30 sh  ~/.conky/interface.sh | grep "current week" | awk '{printf $3 $4}'}${goto 140}${color9}${execi 30 sh  ~/.conky/interface.sh | grep "current week" | awk '{printf $6 $7}'}${alignr}${color fbf2d7}${execi 30 sh  ~/.conky/interface.sh | grep "current week" | awk '{printf $9 $10}'}
+#---------------------
+#BUG tampilan bulanan| 
+# penggunaan data    |
+#---------------------
+${goto 30}${color fbf2d7}Month:${goto 70}${color fbf2d7}${execi 30 sh  ~/.conky/interface.sh | grep "`date +"%b '%y"`" | awk '{printf $3 $4"\t"}'}
+#${goto 70}${color fbf2d7}${color9}${execi 30 sh  ~/.conky/interface.sh | grep "`date +"%b '%y"`" | awk '{printf $6 $7"\t"}'}${alignr}
+	#${color fbf2d7}${execi 30 sh  ~/.conky/interface.sh | grep "`date +"%b '%y"`" | awk '{printf $9 $10}"\t"'}
+]]

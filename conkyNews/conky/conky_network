@@ -1,0 +1,61 @@
+conky.config = {
+		
+
+    background = false,
+    font = 'NanumGothic:pixelsize=10',
+    use_xft = true,
+    xftalpha = 1.0,
+    update_interval = 4,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type = 'dock',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 255,
+    own_window_colour = '#000',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    stippled_borders = 0,
+    border_width = 0,
+    default_color = '#BEC8CB',
+    default_shade_color = '#BEC8CB',
+    default_outline_color = '#BEC8CB',
+    alignment = 'top_left',
+    gap_x = 850,
+    gap_y = 690,
+    use_spacer = 'none',
+    uppercase = true,
+    text_buffer_size = 512,
+    no_buffers = true,
+    cpu_avg_samples = 2,
+    net_avg_samples = 2,
+    use_spacer = 'none',
+    maximum_width = 1024,
+    minimum_height = 640,
+    uppercase = true,
+
+
+};
+conky.text = [[
+${voffset 10}
+${hr 1}
+#${if_existing /proc/net/route en}${color1}
+#${color fbf2d7}Ethernet${color}
+#${color fbf2d7}${offset 10}${color fbf2d7}IP address: ${font}${color fbf2d7}${addr enp4s0}
+#${offset 30}${color fbf2d7}${color fbf2d7}Download speed: ${font}${color fbf2d7}${downspeed enp4s0}${alignr}${color fbf2d7}${totaldown enp4s0}${color fbf2d7} Total${color}
+#${offset 30}${color fbf2d7}${color fbf2d7}Upload speed: ${font}${color fbf2d7}${upspeed enp4s0}${alignr}${color fbf2d7}${totalup enp4s0}${color fbf2d7} Total${color}
+#${else}
+${color fbf2d7}Wireless${color}
+${voffset 2}${offset 30}${color fbf2d7}SSID:${color fbf2d7}${alignr}${wireless_essid wlx20689de5c8db}
+${color fbf2d7}${voffset 2}${offset 30}${color fbf2d7}IP address: ${alignr}${color fbf2d7}${addr wlx20689de5c8db}
+${color fbf2d7}${voffset 2}Upload${alignr}${color fbf2d7}${upspeed wlx20689de5c8db}
+${color fbf2d7}${voffset 2}${upspeedgraph wlx20689de5c8db 10,150 ${color fbf2d7} ${color fbf2d7} 10000000 -l -t}
+${color fbf2d7}${voffset 2}Download${alignr}${color fbf2d7}${downspeed wlx20689de5c8db}
+${color fbf2d7}${voffset 2}${downspeedgraph wlx20689de5c8db 10,150 ${color fbf2d7} ${color fbf2d7} 10000000 -l -t}
+#${endif}
+]]
